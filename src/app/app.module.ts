@@ -10,11 +10,11 @@ import { IntroComponent } from './intro/intro.component';
   declarations: [
     AppComponent,
     AboutComponent,
-    IntroComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    IntroComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,7 @@ describe('IntroComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [IntroComponent]
+      imports: [IntroComponent]
     });
     fixture = TestBed.createComponent(IntroComponent);
     component = fixture.componentInstance;
@@ -18,4 +18,14 @@ describe('IntroComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render profile information', () => {
+    expect(fixture.nativeElement.textContent).toContain('Andrés Felipe Arroyave Naranjo')
+    expect(fixture.nativeElement.textContent).toContain('Frontend developer with')
+  })
+
+  it('should render the social media icons', () => {
+    const socialMediaIcons = (fixture.nativeElement as HTMLElement).querySelectorAll('.social-icon')
+    expect(socialMediaIcons.length).toBe(5) 
+  })
 });
