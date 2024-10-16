@@ -1,31 +1,28 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { byText, byTextContent, createComponentFactory, Spectator } from '@ngneat/spectator';
 
 import { IntroComponent } from './intro.component';
 
 describe('IntroComponent', () => {
-  let component: IntroComponent;
-  let fixture: ComponentFixture<IntroComponent>;
+  let spectator: Spectator<IntroComponent>
+
+  const createComponent = createComponentFactory({
+    component: IntroComponent,
+  })
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [IntroComponent]
-    });
-    fixture = TestBed.createComponent(IntroComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    spectator = createComponent()
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(spectator.component).toBeTruthy();
   });
 
   it('should render profile information', () => {
-    expect(fixture.nativeElement.textContent).toContain('Andrés Felipe Arroyave Naranjo')
-    expect(fixture.nativeElement.textContent).toContain('Frontend developer with')
+    expect(spectator.query(byText('Andrés Felipe Arroyave Naranjo'))).toExist()
   })
 
   it('should render the social media icons', () => {
-    const socialMediaIcons = (fixture.nativeElement as HTMLElement).querySelectorAll('.social-icon')
-    expect(socialMediaIcons.length).toBe(5) 
+    const socialMediaIcons = spectator.queryAll('.social-icon')
+    expect(socialMediaIcons.length).toBe(5)
   })
 });

@@ -11,7 +11,7 @@ import { faGithub, faLinkedinIn, faMediumM, faXTwitter, faYoutube } from '@forta
   imports: [FontAwesomeModule]
 })
 export class IntroComponent {
-  icons = {
+  protected icons = {
     github: faGithub,
     linkedIn: faLinkedinIn,
     medium: faMediumM,
