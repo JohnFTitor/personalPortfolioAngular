@@ -18,8 +18,8 @@ export class SkillsComponent implements OnInit {
 
   private colors = [
     'bg-indigo-600',
-    'bg-indigo-500',
-    'bg-blue-700',
+    'bg-slate-700',
+    'bg-orange-700',
     'bg-red-900',
   ];
 

@@ -11,6 +11,22 @@ export class AboutComponent {
   skills: Skill[] = [
     { name: 'Angular' },
     { name: 'React' },
-    { name: 'Vue' },
+    { name: 'TypeScript' },
+    { name: 'HTML/CSS' },
+    { name: 'SCSS' },
+    { name: 'Python' },
+    { name: 'Django' },
+    { name: 'Git' },
+    { name: 'Github' },
+    { name: 'PostgreSQL' },
+    { name: 'TDD' },
+    { name: 'Tailwind' },
+    { name: 'SCRUM' },
+    { name: 'Unit Testing' },
+    { name: 'Jest' },
+    { name: 'Ruby' },
+    { name: 'Ruby on Rails' },
+    { name: 'React Native' },
+    { name: 'Redux' },
   ];
 }
