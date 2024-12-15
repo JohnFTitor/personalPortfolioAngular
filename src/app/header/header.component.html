@@ -1,0 +1,12 @@
+<div class="w-full h-full flex flex-start p-5">
+  <button
+    class="hamburger"
+    [class.active]="isMenuOpen()"
+    (click)="toggleMenu()"
+    aria-label="Menu"
+  >
+    <span class="line line-1"></span>
+    <span class="line line-2"></span>
+    <span class="line line-3"></span>
+  </button>
+</div>
