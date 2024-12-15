@@ -1,9 +1,11 @@
 <div class="w-full h-full flex flex-col">
   <app-header class="md:hidden" (openSidePanel)="this.isSidePanelOpen.set($event)"></app-header>
   @if(isSidePanelOpen()) {
-    <app-side-panel></app-side-panel>
+  <app-side-panel
+    class="absolute top-0 left-0 w-full h-full"
+    @slideInOut
+  ></app-side-panel>
   }
   <router-outlet></router-outlet>
 </div>
-
 
