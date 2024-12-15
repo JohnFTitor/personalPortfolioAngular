@@ -8,7 +8,7 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 90;
 
   .line {
     display: block;
@@ -22,6 +22,7 @@
   &.active {
     .line-1 {
       transform: translateY(11px) rotate(45deg);
+      background: #fff;
     }
 
     .line-2 {
@@ -30,6 +31,7 @@
 
     .line-3 {
       transform: translateY(-11px) rotate(-45deg);
+      background: #fff;
     }
   }
 }

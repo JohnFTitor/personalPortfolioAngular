@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, output } from '@angular/core';
 
 
 @Component({
@@ -11,7 +11,10 @@ import { Component, signal } from '@angular/core';
 export class HeaderComponent {
   isMenuOpen = signal(false);
 
+  openSidePanel = output<boolean>();
+
   toggleMenu() {
     this.isMenuOpen.update(value => !value);
+    this.openSidePanel.emit(this.isMenuOpen());
   }
 }
