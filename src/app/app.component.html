@@ -1,4 +1,4 @@
-<div class="w-full h-full flex flex-col">
+<div class="w-full h-full flex flex-col" [ngClass]="{'overflow-hidden': isSidePanelOpen()}">
   <app-header class="md:hidden" [isMenuOpen]="isSidePanelOpen()" (openSidePanel)="this.isSidePanelOpen.set($event)"></app-header>
   @if(isSidePanelOpen()) {
   <app-side-panel
