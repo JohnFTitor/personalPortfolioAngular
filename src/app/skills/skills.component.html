@@ -1,0 +1,8 @@
+<div class="skills-container">
+  @for (skill of skills(); track $index) {
+  <div [class]="'skill-bubble ' + skill.classes"
+       [style.--delay]="$index * 0.2 + 's'">
+    <span class="text-white">{{ skill.name }}</span>
+  </div>
+  }
+</div>

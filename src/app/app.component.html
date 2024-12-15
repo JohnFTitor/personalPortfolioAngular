@@ -2,7 +2,7 @@
   <app-header class="md:hidden" [isMenuOpen]="isSidePanelOpen()" (openSidePanel)="this.isSidePanelOpen.set($event)"></app-header>
   @if(isSidePanelOpen()) {
   <app-side-panel
-    class="absolute top-0 left-0 w-full h-full"
+    class="absolute top-0 left-0 w-full h-full z-50"
     @slideInOut
     (closeSidePanel)="isSidePanelOpen.set(false)"
   ></app-side-panel>
