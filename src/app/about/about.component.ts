@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { SkillsComponent, Skill } from '../skills/skills.component';
+import { LearningElementComponent } from '../learning-element/learning-element.component';
+
 @Component({
   selector: 'app-about',
-  imports: [SkillsComponent],
+  imports: [SkillsComponent, LearningElementComponent],
   templateUrl: './about.tpl.html',
   styleUrls: ['./about.styles.scss'],
   standalone: true,
@@ -28,5 +30,13 @@ export class AboutComponent {
     { name: 'Ruby on Rails' },
     { name: 'React Native' },
     { name: 'Redux' },
+  ];
+
+  learning: string[] = [
+    'Software Architecture',
+    'Design Patterns',
+    'Japanese',
+    'AI',
+    'Machine Learning',
   ];
 }

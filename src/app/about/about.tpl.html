@@ -26,5 +26,11 @@
   <div class="flex flex-col gap-5">
     <h2 class="text-2xl font-bold">Skills</h2>
     <app-skills [skills]="skills"></app-skills>
+    <h2 class="text-2xl font-bold">Learning</h2>
+    <div class="flex flex-col w-full gap-4">
+      @for (item of learning; track item; let i = $index) {
+        <app-learning-element class="slide w-fit" [item]="item" [index]="i"></app-learning-element>
+      }
+    </div>
   </div>
 </div>
