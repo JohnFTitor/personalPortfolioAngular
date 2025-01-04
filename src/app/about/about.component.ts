@@ -32,6 +32,26 @@ export class AboutComponent {
     { name: 'Redux' },
   ];
 
+  ngAfterViewInit() {
+    // Get all slide elements
+    const slides = document.querySelectorAll('.slide');
+
+    slides.forEach((slide) => {
+      // Calculate the ratio of element width to parent width
+      const parentWidth = slide.parentElement?.clientWidth || 0;
+      const elementWidth = slide.clientWidth;
+      const ratio = elementWidth / parentWidth;
+
+      // Set the CSS variable for this specific element
+      slide.setAttribute(
+        'style',
+        `--element-width-ratio: ${ratio.toString()}; ${slide.getAttribute(
+          'style'
+        )}`
+      );
+    });
+  }
+
   learning: string[] = [
     'Software Architecture',
     'Design Patterns',
